@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+             jaxb:version="2.0"
+             targetNamespace="http://shared.testservices.com/"
+             xmlns:tns="http://shared.testservices.com/"
+             elementFormDefault="qualified">
+
+    <!-- Settings for the JAXB code generation -->
+    <xs:annotation>
+        <xs:appinfo>
+            <!-- Set the package name for the generated classes -->
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.testservices.generated.shared" />
+            </jaxb:schemaBindings>
+        </xs:appinfo>
+    </xs:annotation>
+
+    <!-- Begin Types/Classes to be generated -->
+    <xs:group name="baseRequest">
+        <xs:sequence>
+            <xs:element name="user" type="xs:string"/>
+            <xs:element name="apikey" type="xs:string"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="baseResponse">
+        <xs:sequence>
+            <xs:element name="success" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:group>
+
+</xs:schema>
